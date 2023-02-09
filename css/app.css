@@ -10,9 +10,9 @@
     font: inherit;
 }
 
-html {
+/* html {
     color-scheme: dark light;
-}
+} */
 
 body {
     min-height: 100vh;
@@ -31,11 +31,30 @@ img, picture, svg, video {
 }
 
 html {
-    line-height: 1.6;
+    line-height: 1.5;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 16px;
     scroll-behavior: smooth;
 }
+
+section {
+    padding-block: 1rem;
+}
+.wrapper {
+    max-width: 50rem;
+    margin-inline: auto;
+    padding-inline:0.5rem;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    padding-bottom: 1rem;
+}
+.section-title span {
+    color: var(--primary-color);
+}
+
 
 
 /*--- HERO SECTION ----------------------------------------*/
@@ -63,12 +82,68 @@ html {
     font-size: clamp(3rem, 10vw, 4rem);
 }
 
+/*--- ABOUT SECTION ----------------------------------------*/
+.about .wrapper {
+    border: 1px solid red;
+}
 
+.about {
+    font-size: clamp(1.4rem, 4vw, 1.6rem);
+    background: teal;
+}
+
+.about-description {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    
+}
+
+.about-description img {
+    height: clamp(160px, 25vw, 200px);
+}
+
+.about-text a {
+    color: #000000;
+    text-decoration: underline;
+    text-decoration-color: var(--primary-color);
+}
+
+.about-text a:hover {
+    color: var(--primary-color);
+}
+
+.about-tech {
+    padding-top: 1rem;
+}
+
+.tech-logos {
+    display:flex;
+   
+    flex-wrap: wrap;
+    gap:25px;
+}
+
+.tech-logos img{
+    height: 40px;
+}
 
 
 /*--- RESPONSIVE SECTION ----------------------------------------*/
 @media (min-width: 40em) {
     .hero {
         padding: 120px;
+    }
+
+    .about-description{
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 3rem;
+    }
+
+    .about-description img {
+        order: 2;
     }
 }
